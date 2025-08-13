@@ -34,9 +34,16 @@ function getCurrentWeekday(date=new Date) {
   const today = new Date(date);
   return days[today.getDay()];
 }
+// 获取当前时间
+function getCurrentTime() {
+  const today = new Date();
+  return today.toLocaleTimeString('zh-CN', { hour12: false });
+}
+
 // 导出模块
 module.exports = {
     currentAge,
     gdiffAge,
-    getCurrentWeekday
+    getCurrentWeekday,
+    getCurrentTime
 };
